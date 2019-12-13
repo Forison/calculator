@@ -9,9 +9,10 @@ body{
 	margin-top: 20px;
   width: 100%;
 	height: 70px;
-	border:2px solid #000;
 	border-top-left-radius:5px;
 	border-top-right-radius:5px;
+	box-shadow: 1px 1px 1px 1px #bebebe;
+	background-image: linear-gradient(#bebebe, #fff, #bebebe);
 }
 .App{
 	background:#fff;
@@ -39,4 +40,7 @@ body{
 	width: 100%;
 	height: 80px;
 	padding: 0;
+}
+.results{
+	font-weight: 700;
 }

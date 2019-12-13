@@ -1,18 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Display from './Display';
 import Bpanel from './Bpanel';
 import '../App.css';
 
-function App() {
-  return (
-    <div className="container-fluid">
-      <div className="row">
-        <div className="col-lg-4 mx-auto App shadow-lg mt-5 p-3">
-          <Display />
-          <Bpanel />
+
+class App extends Component {
+  start = "0";
+  render() {
+    return (
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-11 col-md-8 col-lg-4 mx-auto App shadow-lg mt-5 p-3">
+            <Display results={this.start} />
+            <Bpanel />
+          </div>
         </div>
       </div>
-    </div>
-  );
+    )
+  }
 }
 export default App;

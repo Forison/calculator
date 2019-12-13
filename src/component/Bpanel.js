@@ -6,16 +6,16 @@ class Bpanel extends Component {
 			<div className="container">
 				<div className="row ">
 					<div className="col-3">
-						<button className="btn btn-secondary">AC</button>
+						<button className="btn btn-success">AC</button>
 					</div>
 					<div className="col-3">
-						<button className="btn btn-secondary">+/-</button>
+						<button className="btn btn-success">+/-</button>
 					</div>
 					<div className="col-3">
-						<button className="btn btn-secondary">%</button>
+						<button className="btn btn-success">%</button>
 					</div>
 					<div className="col-3">
-						<button className="btn btn-secondary">/</button>
+						<button className="btn btn-success">/</button>
 					</div>
 
 					<div className="col-3">
@@ -28,7 +28,7 @@ class Bpanel extends Component {
 						<button className="btn btn-secondary">3</button>
 					</div>
 					<div className="col-3">
-						<button className="btn btn-secondary">*</button>
+						<button className="btn btn-success">*</button>
 					</div>
 					<div className="col-3">
 						<button className="btn btn-secondary">4</button>
@@ -40,7 +40,7 @@ class Bpanel extends Component {
 						<button className="btn btn-secondary">6</button>
 					</div>
 					<div className="col-3">
-						<button className="btn btn-secondary">-</button>
+						<button className="btn btn-success">-</button>
 					</div>
 					<div className="col-3">
 						<button className="btn btn-secondary">7</button>
@@ -52,7 +52,7 @@ class Bpanel extends Component {
 						<button className="btn btn-secondary">9</button>
 					</div>
 					<div className="col-3">
-						<button className="btn btn-secondary">+</button>
+						<button className="btn btn-success">+</button>
 					</div>
 					<div className="col-3">
 						<button className="btn btn-secondary">0</button>
