@@ -6,7 +6,7 @@ export class Display extends Component {
 	render() {
 		return (
 			<div className="displayWrap mb-1">
-				<h1 className="float-right p-2 results"> {this.props.results}</h1>
+				<h1 className="float-right p-2 results"> {this.props.result}</h1>
 			</div>
 		)
 	}
