@@ -5,7 +5,6 @@ import '../App.css';
 
 const App = () => (
   <div>
-      return (
     <div className="container-fluid">
       <div className="row">
         <div className="col-11 col-md-8 col-lg-4 mx-auto App shadow-lg mt-5 p-3">
@@ -14,7 +13,6 @@ const App = () => (
         </div>
       </div>
     </div>
-      );
   </div>
 );
 export default App;
