@@ -12,11 +12,11 @@ const Bpanel = () => {
   return (
     <div>
       {
-        butName.map((group) => (
+        butName.map(group => (
           <div key={group.id}>
             <div className="container">
               <div className="row">
-                {group.map((ButtonText) => (
+                {group.map(ButtonText => (
                   <div key={ButtonText.id} className="col-3">
                     <Button name={ButtonText} />
                   </div>
