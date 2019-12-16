@@ -7,7 +7,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      butName: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'AC', '/', '+/-', '-', '.', '+', '*','=']
+      butName: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'AC', '/', '+/-', '-', '.', '+', '*', '='],
     };
   }
 
