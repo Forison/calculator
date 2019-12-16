@@ -1,9 +1,14 @@
 import React from 'react';
 import Button from './Button';
-const Bpanel = () => (
+import propTypes from 'prop-types';
+
+const Bpanel = ({ butName }) => (
 	<div>
-		<Button />
+		<Button butId={butName} />
 	</div>
 );
-
+;
+Button.propTypes = {
+	butName: propTypes.array.isRequired,
+};
 export default Bpanel;
