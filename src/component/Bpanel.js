@@ -3,7 +3,7 @@ import Button from './Button';
 
 const Bpanel = () => (
   <div>
-		<Button/>
+    <Button />
   </div>
 );
 
