@@ -12,13 +12,11 @@ body{
 	border-top-left-radius:5px;
 	border-top-right-radius:5px;
 	box-shadow: 1px 1px 1px 1px #bebebe;
-	background-image: linear-gradient(#bebebe, #fff, #bebebe);
+	background-image: linear-gradient(#bebebe,#e5e2e2,#e5e2e2);
 }
-.displayWrap:hover{
-	background-image: linear-gradient(#fff, #bebebe,#fff);
-}
+
 .calculatorBody{
-	width: 70px;
+	width: 700px;
 	background:#fff;
 	border-top-left-radius:10px;
 	border-top-right-radius:10px;
@@ -28,18 +26,40 @@ body{
 	height: 75px;
 	font-weight: 700;
 }
+.row{
+    height: 100px;
+}
+.btn{
+	border: 1px solid silver;
+	color: #000;
+}
 .col-3{
-	width: 100%;
 	height: 80px;
-	border:1px solid #fff;
+	border:1px solid #e0e0e0;
 	padding: 0;
 }
 .col-6{
-	border:1px solid #fff;
-	width: 100%;
 	height: 80px;
+	border:1px solid #e0e0e0;
 	padding: 0;
 }
+.orangeColor{
+	background: #ff9974;
+}
+.orangeColor:hover{
+	background: #f7784a;
+}
+.colorMe{
+	background: #616161;
+}
+
+.colorMe:hover{
+	background: #535353;
+	color: #222;
+}
 .results{
-	font-weight: 700;
+	font-weight: bolder;
+	color: #fff;
+	font-size: 40px;
+	padding: 40px;
 }

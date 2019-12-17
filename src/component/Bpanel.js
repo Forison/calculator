@@ -2,7 +2,9 @@ import React from 'react';
 import id from 'shortid';
 import Button from './Button';
 
-
+const wide = arg => (arg === '0' ? 'wide' : 'normal');
+const zeroStyling = arg => (arg === '0' ? 'col-6' : 'col-3');
+const colorStyler = () => ('colorMe');
 const Bpanel = () => {
   const butName = [
     ['AC', '+/-', '%', '÷'],
@@ -19,8 +21,8 @@ const Bpanel = () => {
             <div className="container">
               <div className="row">
                 {group.map(ButtonText => (
-                  <div key={id.generate()} className="col-3">
-                    <Button name={ButtonText} />
+                  <div key={id.generate()} className={`${zeroStyling(ButtonText)}`}>
+                    <Button name={ButtonText} color={colorStyler()} wide={`${wide(ButtonText)}`} />
                   </div>
                 ))}
               </div>
