@@ -28,6 +28,9 @@ body{
 	height: 75px;
 	font-weight: 700;
 }
+.row{
+    height: 100px;
+}
 .col-3{
 	width: 100%;
 	height: 80px;
