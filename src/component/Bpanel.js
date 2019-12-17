@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from './Button';
+import id from 'shortid';
 
 const Bpanel = () => {
   const butName = [
@@ -13,11 +14,11 @@ const Bpanel = () => {
     <div>
       {
         butName.map(group => (
-          <div key={group.id}>
+          <div key={id.generate()}>
             <div className="container">
               <div className="row">
                 {group.map(ButtonText => (
-                  <div key={ButtonText.id} className="col-3">
+                  <div key={id.generate()} className="col-3">
                     <Button name={ButtonText} />
                   </div>
                 ))}
