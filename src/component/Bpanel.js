@@ -1,6 +1,7 @@
 import React from 'react';
-import Button from './Button';
 import id from 'shortid';
+import Button from './Button';
+
 
 const Bpanel = () => {
   const butName = [
