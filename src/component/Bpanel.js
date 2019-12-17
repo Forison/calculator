@@ -2,7 +2,7 @@ import React from 'react';
 import id from 'shortid';
 import Button from './Button';
 
-
+const zeroStyler = (arg) => (arg === '0' ? 'col-6' : 'col-3');
 const Bpanel = () => {
   const butName = [
     ['AC', '+/-', '%', '÷'],
@@ -14,12 +14,12 @@ const Bpanel = () => {
   return (
     <div>
       {
-        butName.map(group => (
+        butName.map((group) => (
           <div key={id.generate()}>
             <div className="container">
               <div className="row">
-                {group.map(ButtonText => (
-                  <div key={id.generate()} className="col-3">
+                {group.map((ButtonText) => (
+                  <div key={id.generate()} className={`${zeroStyler(ButtonText)}`}>
                     <Button name={ButtonText} />
                   </div>
                 ))}
