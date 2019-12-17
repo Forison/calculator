@@ -14,11 +14,9 @@ body{
 	box-shadow: 1px 1px 1px 1px #bebebe;
 	background-image: linear-gradient(#bebebe,#e5e2e2,#e5e2e2);
 }
-.displayWrap:hover{
-	background-image: linear-gradient(#bebebe,#e5e2e2,#e5e2e2);
-}
+
 .calculatorBody{
-	width: 70px;
+	width: 700px;
 	background:#fff;
 	border-top-left-radius:10px;
 	border-top-right-radius:10px;
@@ -39,6 +37,9 @@ body{
 	height: 80px;
 	border:1px solid #e0e0e0;
 	padding: 0;
+}
+.rows{
+	display: flex;
 }
 .col-6{
 	height: 80px;
