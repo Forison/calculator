@@ -45,6 +45,20 @@ body{
 	border:1px solid #e0e0e0;
 	padding: 0;
 }
+.orangeColor{
+	background: #ff9974;
+}
+.orangeColor:hover{
+	background: #f7784a;
+}
+.colorMe{
+	background: #616161;
+}
+
+.colorMe:hover{
+	background: #535353;
+	color: #222;
+}
 .results{
 	font-weight: bolder;
 	color: #fff;
