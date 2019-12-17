@@ -12,10 +12,10 @@ body{
 	border-top-left-radius:5px;
 	border-top-right-radius:5px;
 	box-shadow: 1px 1px 1px 1px #bebebe;
-	background-image: linear-gradient(#bebebe, #fff, #bebebe);
+	background-image: linear-gradient(#bebebe,#e5e2e2,#e5e2e2);
 }
 .displayWrap:hover{
-	background-image: linear-gradient(#fff, #bebebe,#fff);
+	background-image: linear-gradient(#bebebe,#e5e2e2,#e5e2e2);
 }
 .calculatorBody{
 	width: 70px;
@@ -41,5 +41,8 @@ body{
 	padding: 0;
 }
 .results{
-	font-weight: 700;
+	font-weight: bolder;
+	color: #fff;
+	font-size: 40px;
+	padding: 40px;
 }
