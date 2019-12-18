@@ -1,5 +1,3 @@
-// import React from 'react';
-
 const calculate = ({ total, next, operation }, butName) => {
 	const calObj = {
 		total: total,
