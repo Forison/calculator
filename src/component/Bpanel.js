@@ -3,7 +3,7 @@ import id from 'shortid';
 import Button from './Button';
 
 const wide = arg => (arg === '0' ? 'wide' : 'normal');
-const zeroStyling = arg=> (arg === '0' ? 'col-6' : 'col-3');
+const zeroStyling = arg => (arg === '0' ? 'col-6' : 'col-3');
 const colorStyler = () => ('colorMe');
 const Bpanel = () => {
   const butName = [
