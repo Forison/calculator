@@ -5,7 +5,7 @@ import Button from './Button';
 const wide = arg => (arg === '0' ? 'wide' : 'normal');
 const zeroStyling = arg => (arg === '0' ? 'col-6' : 'col-3');
 const colorStyler = () => ('colorMe');
-const Bpanel = () => {
+const Bpanel = ({ clickHandler }) => {
   const butName = [
     ['AC', '+/-', '%', '÷'],
     ['7', '8', '9', 'x'],
@@ -22,7 +22,7 @@ const Bpanel = () => {
               <div className="row">
                 {group.map(ButtonText => (
                   <div key={id.generate()} className={`${zeroStyling(ButtonText)}`}>
-                    <Button name={ButtonText} color={colorStyler()} wide={`${wide(ButtonText)}`} />
+                    <Button name={ButtonText} color={colorStyler()} wide={`${wide(ButtonText)}`} clickMe={clickHandler} />
                   </div>
                 ))}
               </div>

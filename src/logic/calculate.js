@@ -2,7 +2,7 @@ const calculate = ({ total, next, operation }, butName) => {
   const calObj = {
     total,
     next,
-    operation,
+    operation
   };
   switch (butName) {
     case 'AC':
