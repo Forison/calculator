@@ -3,6 +3,8 @@ import Display from './Display';
 import Bpanel from './Bpanel';
 import '../App.css';
 
+// import calculate from '../logic/calculate'; //commented for passing linter errors
+
 const App = () => (
   <div>
     <div className="container-fluid">
