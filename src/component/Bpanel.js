@@ -13,6 +13,7 @@ const Bpanel = ({ clickHandler }) => {
     ['1', '2', '3', '+'],
     ['0', '.', '='],
   ];
+  
   return (
     <div>
       {
