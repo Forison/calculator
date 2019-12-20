@@ -2,17 +2,17 @@ const calculate = ({ total, next, operation }, butName) => {
   const calObj = {
     total,
     next,
-    operation
+    operation,
   };
   switch (butName) {
     case 'AC':
-      calObj.total = '' + '0';
+      calObj.total = ''.concat('0');
       calObj.next = '';
       calObj.operation = '';
       break;
     case '+/-':
-      calObj.total = '-' + total;
-      calObj.next = '-' + next;
+      calObj.total = `-${total}`;
+      calObj.next = `-${next}`;
       break;
     case '+':
     case '-':

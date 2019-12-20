@@ -8,117 +8,105 @@ import operate from '../logic/operate';
 
 class App extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       total: '0',
       next: '',
-      operation: null
-    }
+      operation: null,
+    };
+  }
 
-  }
-  initialState = (total, next, operation) => {
-    return { total, next, operation }
-  }
-  handleClick = buttonName => {
+  initialState = (total, next, operation) => ({ total, next, operation })
+
+  handleClick = (buttonName) => {
     if (['-', '+'].includes(buttonName)) {
       this.setState({
         operation: buttonName,
-        // next: this.state.next.concat(buttonName)
       }, () => {
-        calculate(this.state, buttonName)
-        console.log(this.state)
-        const { total, next, operation } = this.state
-        const numberONe = parseInt(total)
-        const numberTwo = next === '' && (buttonName === '+' || buttonName === '-') ? '0' : parseInt(next)
-        console.log(operate(numberONe, numberTwo, operation))
+        calculate(this.state, buttonName);
+        const { total, next, operation } = this.state;
+        const numberONe = parseInt(total, 10);
+        const numberTwo = next === '' && (buttonName === '+' || buttonName === '-') ? '0' : parseInt(next, 10);
         this.setState({
           total: operate(numberONe, numberTwo, operation),
-          next: ''
-        })
-      })
+          next: '',
+        });
+      });
     } else if (buttonName === '=') {
-      const { total, next, operation } = this.state
+      const { total, next, operation } = this.state;
       this.setState({
-        total: operate(total, next, operation)
+        total: operate(total, next, operation),
       }, () => {
-        calculate(this.state, buttonName)
+        calculate(this.state, buttonName);
         this.setState(this.initialState(total, '', null), () => {
           this.setState({
-            total: operate(total, next, operation)
-          }, () => { console.log(this.state) })
-
-        })
-      })
+            total: operate(total, next, operation),
+          }, () => { });
+        });
+      });
     } else if (buttonName === '+/-') {
-      this.setState(calculate(this.state, buttonName), () => { console.log(this.state) })
+      this.setState((prevState) => { calculate(prevState, buttonName); });
     } else if (buttonName === 'AC') {
-      this.setState(calculate(this.state, buttonName), () => { console.log(this.state) })
+      this.setState(calculate(this.initialState, buttonName), () => { });
     } else if (['x', '÷', '%'].includes(buttonName)) {
       this.setState({
         operation: buttonName,
-        // next: this.state.next.concat(buttonName)
       }, () => {
-        calculate(this.state, buttonName)
-        console.log(this.state)
-        const { total, next, operation } = this.state
-        const numberONe = parseInt(total)
-        const numberTwo = next === '' && (buttonName === '÷' || buttonName === 'x' || buttonName === '%') ? '1' : parseInt(next)
-        console.log(operate(numberONe, numberTwo, operation))
+        calculate(this.state, buttonName);
+
+        const { total, next, operation } = this.state;
+        const numberONe = parseInt(total, 10);
+        const numberTwo = next === '' && (buttonName === '÷' || buttonName === 'x' || buttonName === '%') ? '1' : parseInt(next, 10);
+
         this.setState({
           total: operate(numberONe, numberTwo, operation),
-          next: ''
-        })
-      })
+          next: '',
+        });
+      });
     } else {
-
-      if (this.state.next === '' && this.state.total === '' && this.state.operation === null) {
+      const { total, next, operation } = this.state;
+      if (next === '' && total === '' && operation === null) {
         this.setState({
-          total: this.state.total.concat(buttonName)
+          total: total.concat(buttonName),
         }, () => {
-          calculate(this.state, buttonName)
-          console.log(this.state)
-
-        })
+          calculate(this.state, buttonName);
+        });
       }
 
-      if (this.state.total === '0') {
+      if (total === '0') {
         this.setState({
-          total: this.state.total.concat(buttonName)
+          total: total.concat(buttonName),
         }, () => {
-          calculate(this.state, buttonName)
-          console.log(this.state)
-
-        })
+          calculate(this.state, buttonName);
+        });
       }
-      if (this.state.next === '' && this.state.total !== '' && this.state.operation === null) {
+      if (next === '' && total !== '' && operation === null) {
         this.setState({
-          total: this.state.total.concat(buttonName)
+          total: total.concat(buttonName),
         }, () => {
-          calculate(this.state, buttonName)
-          console.log(this.state)
-        })
+          calculate(this.state, buttonName);
+        });
       }
 
-      if (this.state.next === '' && this.state.total !== '0' && this.state.total !== '' && this.state.operation !== null) {
+      if (next === '' && total !== '0' && total !== '' && operation !== null) {
         this.setState({
-          next: this.state.next.concat(buttonName)
+          next: next.concat(buttonName),
         }, () => {
-          calculate(this.state, buttonName)
-          console.log(this.state)
-        })
+          calculate(this.state, buttonName);
+        });
       }
-      if (this.state.next !== '' && this.state.total !== '' && this.state.operation !== null) {
+      if (next !== '' && total !== '' && operation !== null) {
         this.setState({
-          next: this.state.next.concat(buttonName)
+          next: next.concat(buttonName),
         }, () => {
-          calculate(this.state, buttonName)
-          // console.log(this.state)
-        })
+          calculate(this.state, buttonName);
+        });
       }
     }
   }
+
   render() {
-    const { total, next, operation } = this.state
+    const { total, next, operation } = this.state;
     return (
       <div>
         <div className="container-fluid">
@@ -130,7 +118,7 @@ class App extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
-export default App
+export default App;
