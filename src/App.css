@@ -18,7 +18,7 @@ body{
 }
 .calculatorBody{
 	width: 700px;
-	background:#fff;
+	background:rgba(255, 255, 255, 0.836);
 	border-top-left-radius:10px;
 	border-top-right-radius:10px;
 }

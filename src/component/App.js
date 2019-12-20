@@ -4,7 +4,7 @@ import Bpanel from './Bpanel';
 import '../App.css';
 import calculate from '../logic/calculate';
 import operate from '../logic/operate';
-
+import Particleswrap from './Particlewrap';
 
 class App extends Component {
   constructor(props) {
@@ -59,7 +59,7 @@ class App extends Component {
         const numberTwo = next === '' && (buttonName === '÷' || buttonName === 'x' || buttonName === '%') ? '1' : parseInt(next, 10);
 
         this.setState({
-          total: operate(numberONe, numberTwo, operation),
+          total: operate(numberONe.replace(/\s+/g, ''), numberTwo.replace(/\s+/g, ''), operation),
           next: '',
         });
       });
@@ -102,6 +102,14 @@ class App extends Component {
           calculate(this.state, buttonName);
         });
       }
+
+      if (next === '' && total !== '' && operation === '') {
+        this.setState({
+          total: total.concat(buttonName),
+        }, () => {
+          calculate(this.state, buttonName);
+        });
+      }
     }
   }
 
@@ -110,8 +118,9 @@ class App extends Component {
     return (
       <div>
         <div className="container-fluid">
+          <Particleswrap />
           <div className="row">
-            <div className="col-4 mx-auto caluatorBody shadow-lg mt-5 p-3">
+            <div className="col-4 mx-auto caluatorBody shadow-lg mt-2 p-3">
               <Display result={total} nextKey={next} op={operation} />
               <Bpanel clickHandler={this.handleClick} />
             </div>
