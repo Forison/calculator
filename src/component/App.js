@@ -10,7 +10,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      total: '',
+      total: '0',
       next: '',
       operation: null
     }
@@ -20,8 +20,7 @@ class App extends Component {
     return { total, next, operation }
   }
   handleClick = buttonName => {
-    // // write total unless buttonName is not operator
-    if (['x', '-', '+', '÷', '/','%'].includes(buttonName)) {
+    if (['-', '+'].includes(buttonName)) {
       this.setState({
         operation: buttonName,
         // next: this.state.next.concat(buttonName)
@@ -55,6 +54,22 @@ class App extends Component {
       this.setState(calculate(this.state, buttonName), () => { console.log(this.state) })
     } else if (buttonName === 'AC') {
       this.setState(calculate(this.state, buttonName), () => { console.log(this.state) })
+    } else if (['x', '÷', '%'].includes(buttonName)) {
+      this.setState({
+        operation: buttonName,
+        // next: this.state.next.concat(buttonName)
+      }, () => {
+        calculate(this.state, buttonName)
+        console.log(this.state)
+        const { total, next, operation } = this.state
+        const numberONe = parseInt(total)
+        const numberTwo = next === '' && (buttonName === '÷' || buttonName === 'x' || buttonName === '%') ? '1' : parseInt(next)
+        console.log(operate(numberONe, numberTwo, operation))
+        this.setState({
+          total: operate(numberONe, numberTwo, operation),
+          next: ''
+        })
+      })
     } else {
 
       if (this.state.next === '' && this.state.total === '' && this.state.operation === null) {
