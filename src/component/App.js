@@ -73,7 +73,15 @@ class App extends Component {
         });
       }
 
-      if (total === '0') {
+      if (next === '' && total === '0' && operation === '') {
+        this.setState({
+          total: total.concat(buttonName),
+        }, () => {
+          calculate(this.state, buttonName);
+        });
+      }
+
+      if (next === '' && total !== '0' && operation === '') {
         this.setState({
           total: total.concat(buttonName),
         }, () => {
@@ -88,24 +96,9 @@ class App extends Component {
         });
       }
 
-      if (next === '' && total !== '0' && total !== '' && operation !== null) {
+      if (next === '' && total !== '' && operation !== null && operation !== '') {
         this.setState({
           next: next.concat(buttonName),
-        }, () => {
-          calculate(this.state, buttonName);
-        });
-      }
-      if (next !== '' && total !== '' && operation !== null) {
-        this.setState({
-          next: next.concat(buttonName),
-        }, () => {
-          calculate(this.state, buttonName);
-        });
-      }
-
-      if (next === '' && total !== '' && operation === '') {
-        this.setState({
-          total: total.concat(buttonName),
         }, () => {
           calculate(this.state, buttonName);
         });
