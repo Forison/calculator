@@ -15,7 +15,7 @@ const Particlewrap = () => (
       params={{
         particles: {
           number: {
-            value: 150,
+            value: 450,
             density: {
               enable: true,
               value_area: 1803.4120608655228,

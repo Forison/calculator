@@ -113,7 +113,7 @@ class App extends Component {
         <div className="container-fluid">
           <Particleswrap />
           <div className="row">
-            <div className="col-4 mx-auto caluatorBody shadow-lg mt-2 p-3">
+            <div className="col-11 col-md-8 col-lg-4 mx-auto caluatorBody shadow-lg mt-2 p-3">
               <Display result={total} nextKey={next} op={operation} />
               <Bpanel clickHandler={this.handleClick} />
             </div>
