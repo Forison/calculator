@@ -42,7 +42,6 @@ class App extends Component {
         total: operate(total, next, operation)
       }, () => {
         calculate(this.state, buttonName)
-        // console.log(this.state)
         this.setState(this.initialState(total, '', null), () => {
           this.setState({
             total: operate(total, next, operation)
@@ -81,6 +80,16 @@ class App extends Component {
 
         })
       }
+
+      if (this.state.total === '0') {
+        this.setState({
+          total: this.state.total.concat(buttonName)
+        }, () => {
+          calculate(this.state, buttonName)
+          console.log(this.state)
+
+        })
+      }
       if (this.state.next === '' && this.state.total !== '' && this.state.operation === null) {
         this.setState({
           total: this.state.total.concat(buttonName)
@@ -90,7 +99,7 @@ class App extends Component {
         })
       }
 
-      if (this.state.next === '' && this.state.total !== '' && this.state.operation !== null) {
+      if (this.state.next === '' && this.state.total !== '0' && this.state.total !== '' && this.state.operation !== null) {
         this.setState({
           next: this.state.next.concat(buttonName)
         }, () => {

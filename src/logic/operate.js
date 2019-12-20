@@ -21,9 +21,9 @@ const operate = (numberOne, numberTwo, operation) => {
     case '=':
       results = big(numberOne).toString();
       break;
-    
+
     default:
-      results = 'invalid operator';
+      results = big(numberOne).toString();
       break;
   }
   return results;

@@ -6,10 +6,9 @@ const calculate = ({ total, next, operation }, butName) => {
   };
   switch (butName) {
     case 'AC':
-      calObj.total = total.concat('0');
+      calObj.total = '' + '0';
       calObj.next = '';
       calObj.operation = '';
-      calObj.total = total.concat('0');
       break;
     case '+/-':
       calObj.total = '-' + total;
