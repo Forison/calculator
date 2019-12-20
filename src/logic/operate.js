@@ -18,6 +18,10 @@ const operate = (numberOne, numberTwo, operation) => {
     case '%':
       results = big(numberOne).div(100).toString();
       break;
+    case '=':
+      results = big(numberOne).toString();
+      break;
+    
     default:
       results = 'invalid operator';
       break;
