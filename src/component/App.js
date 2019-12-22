@@ -106,6 +106,13 @@ class App extends Component {
           calculate(this.state, buttonName);
         });
       }
+      if (next !== '' && total !== '' && operation !== null && operation !== '') {
+        this.setState({
+          next: next.concat(buttonName),
+        }, () => {
+          calculate(this.state, buttonName);
+        });
+      }
     }
   }
 
