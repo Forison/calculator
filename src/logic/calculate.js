@@ -11,8 +11,8 @@ const calculate = ({ total, next, operation }, butName) => {
       calObj.operation = '';
       break;
     case '+/-':
-      calObj.total = `-${total}`;
-      calObj.next = `-${next}`;
+      calObj.total = calObj.total === '' || calObj.total === '0' ? calObj.total : calObj.total = `${total * -1}`;
+      calObj.next = calObj.next === '' || calObj.next === '0' ? calObj.next : calObj.next = `${next * -1}`;
       break;
     case '+':
     case '-':

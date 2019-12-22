@@ -45,7 +45,10 @@ class App extends Component {
         });
       });
     } else if (buttonName === '+/-') {
-      this.setState((prevState) => { calculate(prevState, buttonName); });
+      this.setState((prevState) => ({
+        total: calculate(prevState, buttonName).total,
+        next: calculate(prevState, buttonName).next,
+      }));
     } else if (buttonName === 'AC') {
       this.setState(calculate(this.initialState, buttonName), () => { });
     } else if (['x', '÷', '%'].includes(buttonName)) {
@@ -59,7 +62,7 @@ class App extends Component {
         const numberTwo = next === '' && (buttonName === '÷' || buttonName === 'x' || buttonName === '%') ? '1' : parseInt(next, 10);
 
         this.setState({
-          total: operate(numberONe.replace(/\s+/g, ''), numberTwo.replace(/\s+/g, ''), operation),
+          total: operate(numberONe, numberTwo, operation),
           next: '',
         });
       });
