@@ -13,7 +13,7 @@ const operate = (numberOne, numberTwo, operation) => {
       results = big(numberOne).times(numberTwo).toString();
       break;
     case '÷':
-      results = numberTwo === 0 ? 'undefined' : big(numberOne).div(numberTwo).toString();
+      results = numberTwo === '0' ? 'undefined' : big(numberOne).div(numberTwo).toString();
       break;
     case '%':
       results = big(numberOne).div(100).toString();
