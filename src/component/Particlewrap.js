@@ -15,7 +15,7 @@ const Particlewrap = () => (
       params={{
         particles: {
           number: {
-            value: 450,
+            value: 850,
             density: {
               enable: true,
               value_area: 1803.4120608655228,
@@ -28,10 +28,10 @@ const Particlewrap = () => (
             type: 'circle',
             stroke: {
               width: 7,
-              color: '#fff',
+              color: '#777',
             },
             polygon: {
-              nb_sides: 10,
+              nb_sides: 3,
             },
             image: {
               src: 'img/github.svg',
@@ -68,7 +68,7 @@ const Particlewrap = () => (
           },
           move: {
             enable: true,
-            speed: 6,
+            speed: 3,
             direction: 'none',
             random: false,
             straight: false,

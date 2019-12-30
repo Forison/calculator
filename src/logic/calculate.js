@@ -6,7 +6,7 @@ const calculate = ({ total, next, operation }, butName) => {
     next,
     operation,
   };
-  const calcul = () => {
+  const calObjMutator = () => {
     switch (butName) {
       case 'AC':
         calObj.total = ''.concat('0');
@@ -33,18 +33,18 @@ const calculate = ({ total, next, operation }, butName) => {
     return calObj;
   };
   if (['-', '+'].includes(butName)) {
-    return calcul(calObj, butName);
+    return calObjMutator(calObj, butName);
   }
-  if (butName === '=') {
+  else if (butName === '=') {
     calObj.total = operate(total, next, operation);
     calObj.next = '';
     calObj.operation = null;
   } else if (butName === '+/-') {
-    return calcul(calObj, butName);
+    return calObjMutator(calObj, butName);
   } else if (butName === 'AC') {
-    return calcul(calObj, butName);
+    return calObjMutator(calObj, butName);
   } else if (['x', '÷'].includes(butName)) {
-    return calcul(calObj, butName);
+    return calObjMutator(calObj, butName);
   } else if (butName === '%') {
     calObj.total = operate(total, next, butName);
     calObj.next = '';
