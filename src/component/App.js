@@ -15,13 +15,8 @@ class App extends Component {
     };
   }
 
-
-
   handleClick = (buttonName) => {
-    
-    this.setState(calculate(this.state, buttonName), () => {
-      console.log(this.state)
-    });
+    this.setState((prevState) => calculate(prevState, buttonName));
   }
 
   render() {
@@ -29,9 +24,9 @@ class App extends Component {
     return (
       <div>
         <div className="container-fluid">
+          <Particleswrap />
           <div className="row">
             <div className="col-11 col-md-8 col-lg-4 mx-auto caluatorBody shadow-lg mt-2 p-3">
-              <Particleswrap />
               <Display result={total} nextKey={next} op={operation} />
               <Bpanel clickHandler={this.handleClick} />
             </div>

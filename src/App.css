@@ -22,17 +22,15 @@ body{
 	border-top-left-radius:10px;
 	border-top-right-radius:10px;
 }
-.btn{
-	width: 100%;
-	height: 75px;
-	font-weight: 700;
-}
 .row{
     height: 100px;
 }
 .btn{
 	border: 1px solid silver;
 	color: #000;
+	width: 100%;
+	height: 75px;
+	font-weight: 700;
 }
 .col-3{
 	height: 80px;
@@ -56,7 +54,7 @@ body{
 
 .colorMe:hover{
 	background: #535353;
-	color: #222;
+	color: #fff;
 }
 .results{
 	font-weight: bolder;

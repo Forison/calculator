@@ -1,9 +1,10 @@
 import operate from './operate';
+
 const calculate = ({ total, next, operation }, butName) => {
   const calObj = {
-    total: total,
-    next: next,
-    operation: operation,
+    total,
+    next,
+    operation,
   };
   const calcul = () => {
     switch (butName) {
@@ -30,43 +31,38 @@ const calculate = ({ total, next, operation }, butName) => {
         return calObj;
     }
     return calObj;
-  }
+  };
   if (['-', '+'].includes(butName)) {
     return calcul(calObj, butName);
   }
-  else if (butName === '=') {
-    calObj.total = operate(total, next, operation)
-    calObj.next = ''
-    calObj.operation = null
-  }
-  else if (butName === '+/-') {
+  if (butName === '=') {
+    calObj.total = operate(total, next, operation);
+    calObj.next = '';
+    calObj.operation = null;
+  } else if (butName === '+/-') {
     return calcul(calObj, butName);
-  }
-  else if (butName === 'AC') {
+  } else if (butName === 'AC') {
     return calcul(calObj, butName);
-  }
-  else if (['x', '÷'].includes(butName)) {
+  } else if (['x', '÷'].includes(butName)) {
     return calcul(calObj, butName);
-  }
-  else if (butName === '%') {
-    calObj.total = operate(total, next, butName)
-    calObj.next = ''
-    calObj.operation = null
-  }
-  else {
+  } else if (butName === '%') {
+    calObj.total = operate(total, next, butName);
+    calObj.next = '';
+    calObj.operation = null;
+  } else {
     if (next === '' && total.length >= 2 && operation === null) {
-      calObj.total = calObj.total.concat(butName)
+      calObj.total = calObj.total.concat(butName);
     }
     if (next === '' && total.length === 1 && operation === null) {
-      calObj.total = calObj.total.concat(butName)
+      calObj.total = calObj.total.concat(butName);
     }
     if (next === '' && total !== '' && operation !== null && operation !== '') {
-      calObj.next = calObj.next.concat(butName)
+      calObj.next = calObj.next.concat(butName);
     }
     if (next !== '' && total !== '' && operation !== null && operation !== '') {
-      calObj.next = calObj.next.concat(butName)
+      calObj.next = calObj.next.concat(butName);
     }
   }
-  return calObj
+  return calObj;
 };
 export default calculate;
