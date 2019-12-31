@@ -35,7 +35,7 @@ const calculate = ({ total, next, operation }, butName) => {
   if (['-', '+'].includes(butName)) {
     return calObjMutator(calObj, butName);
   }
-  else if (butName === '=') {
+  if (butName === '=') {
     calObj.total = operate(total, next, operation);
     calObj.next = '';
     calObj.operation = null;
@@ -56,11 +56,14 @@ const calculate = ({ total, next, operation }, butName) => {
     if (next === '' && total.length === 1 && operation === null) {
       calObj.total = calObj.total.concat(butName);
     }
-    if (next === '' && total !== '' && operation !== null && operation !== '') {
+    if (next === '' && total !== '' && operation !== null) {
       calObj.next = calObj.next.concat(butName);
     }
-    if (next !== '' && total !== '' && operation !== null && operation !== '') {
+    if (next !== '' && total !== '' && operation !== null) {
       calObj.next = calObj.next.concat(butName);
+    }
+    if (next === '' && total === 'undefined' && operation === null) {
+      calObj.total = butName;
     }
   }
   return calObj;

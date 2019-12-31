@@ -11,13 +11,14 @@ body{
 	height: 70px;
 	border-top-left-radius:5px;
 	border-top-right-radius:5px;
-	background-image: linear-gradient(#222,#000,#222);
+	background-image: linear-gradient(#0f0258,#000011,#020725);
 	white-space: initial;
 	word-break: break-all;
 }
 .bg-secondary{
 	border-top-left-radius:10px;
 	border-top-right-radius:10px;
+	z-index: 2;
 }
 .btn{
 	border: 1px solid #777;
@@ -52,7 +53,7 @@ body{
 	font-weight: bolder;
 	color: #fff;
 	border-top-right-radius:5px;
-	background-image: linear-gradient(#222,#000,#222);
+	background-image: linear-gradient(#0f0258,#000011,#020725);
 	padding: 11px;
 	word-break: break-all;
 }
