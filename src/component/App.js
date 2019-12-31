@@ -1,20 +1,39 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Display from './Display';
 import Bpanel from './Bpanel';
 import '../App.css';
+import calculate from '../logic/calculate';
+import Particleswrap from './Particlewrap';
 
-// import calculate from '../logic/calculate'; //commented for passing linter errors
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      total: '0',
+      next: '',
+      operation: null,
+    };
+  }
 
-const App = () => (
-  <div>
-    <div className="container-fluid">
-      <div className="row">
-        <div className="col-4 mx-auto caluatorBody shadow-lg mt-5 p-3">
-          <Display />
-          <Bpanel />
+  handleClick = (buttonName) => {
+    this.setState(prevState => calculate(prevState, buttonName));
+  }
+
+  render() {
+    const { total, next, operation } = this.state;
+    return (
+      <div>
+        <div className="container-fluid">
+          <Particleswrap />
+          <div className="row">
+            <div className="col-11 col-md-8 col-lg-4 mx-auto bg-secondary shadow-lg mt-2 p-3">
+              <Display result={total} nextKey={next} op={operation} />
+              <Bpanel clickHandler={this.handleClick} />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-);
+    );
+  }
+}
 export default App;
