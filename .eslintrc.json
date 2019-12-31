@@ -29,6 +29,12 @@
                 ]
             }
         ],
+        "import/extensions": [
+            "never",
+            {
+                ".js": "never"
+            }
+        ],
         "import/no-unresolved": "off",
         "no-shadow": "off",
         "no-tabs": 0
