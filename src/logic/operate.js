@@ -3,7 +3,7 @@ import big from 'big.js';
 const operate = (numberOne, numberTwo, operation) => {
   let results;
   if (numberOne === 'undefined' || numberTwo === 'undefined') {
-    return results = 'undefined'
+    results = 'undefined';
   } else {
     switch (operation) {
       case '+':
