@@ -65,7 +65,7 @@ const calculate = ({ total, next, operation }, butName) => {
     if (next === '' && total === 'undefined' && operation === null) {
       calObj.total = butName;
     }
-    if (next === '' && total=== '0' && operation === null) {
+    if (next === '' && total === '0' && operation === null) {
       calObj.total = butName;
     }
   }
