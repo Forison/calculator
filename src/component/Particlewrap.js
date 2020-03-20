@@ -22,19 +22,19 @@ const Particlewrap = () => (
             },
           },
           color: {
-            value: '#fff',
+            value: "#fff",
           },
           shape: {
-            type: 'circle',
+            type: "circle",
             stroke: {
-              width: 7,
-              color: '#777',
+              width: 2,
+              color: '#fff',
             },
             polygon: {
-              nb_sides: 3,
+              nb_sides: 7,
             },
             image: {
-              src: 'img/github.svg',
+              src: 'img/githb.svg',
               width: 100,
               height: 100,
             },
@@ -43,7 +43,7 @@ const Particlewrap = () => (
             value: 0.4008530152163807,
             random: false,
             anim: {
-              enable: false,
+              enable: true,
               speed: 1,
               opacity_min: 0.1,
               sync: false,
@@ -61,7 +61,7 @@ const Particlewrap = () => (
           },
           line_linked: {
             enable: true,
-            distance: 0,
+            distance: 60,
             color: '#ffffff',
             opacity: 0.3687847739990702,
             width: 0.6413648243462091,
@@ -75,7 +75,7 @@ const Particlewrap = () => (
             out_mode: 'out',
             bounce: false,
             attract: {
-              enable: false,
+              enable: true,
               rotateX: 600,
               rotateY: 1200,
             },

@@ -1,6 +1,6 @@
 # calculator
-A practical implementation of react js as part of a series of projects to be completed by students of [Microverse](https://www.microverse.org/ "The Global School for Remote Software Developers!").
-
+This is a basic calculator for performing simple mathematical calculation. This is practical implementation of react js completed as part of a series of projects to be completed by students of [Microverse](https://www.microverse.org/ "The Global School for Remote Software Developers!").
+![calculator](./app.png)
 ## Technologies
 
 - HTML
