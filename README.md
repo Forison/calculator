@@ -32,6 +32,10 @@ The demo page can be found [HERE](https://guarded-harbor-05894.herokuapp.com/)
 
 [Boakye Addo Forison](https://github.com/Forison)
 
+## Contact
+
+[LinkedIn](https://www.linkedin.com/in/forison/) [Twitter](https://twitter.com/addo_forison)
+
 ## Contributing
 
 1. Fork it (https://github.com/Forison/calculator/)
