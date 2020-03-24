@@ -22,19 +22,21 @@ const calculate = ({ total, next, operation }, butName) => {
       case 'x':
       case '÷':
       case '%':
+      case 'tan':
+      case 'cos':
+      case 'sin':
+      case 'log':
+      case '√':
         calObj.operation = butName;
         break;
       case '=':
         return total;
-
       default:
         return calObj;
     }
     return calObj;
   };
-  if (['-', '+'].includes(butName)) {
-    return calObjMutator(calObj, butName);
-  }
+
   if (butName === '=') {
     calObj.total = operate(total, next, operation);
     calObj.next = '';
@@ -43,7 +45,13 @@ const calculate = ({ total, next, operation }, butName) => {
     return calObjMutator(calObj, butName);
   } else if (butName === 'AC') {
     return calObjMutator(calObj, butName);
-  } else if (['x', '÷'].includes(butName)) {
+  } else if (['x', '÷', '-', '+'].includes(butName)) {
+    return calObjMutator(calObj, butName);
+  } else if (['tan', 'sin', 'cos', 'log', '√'].includes(butName)) {
+    calObj.total = '1';
+    return calObjMutator(calObj, butName);
+  } else if (['Exp'].includes(butName)) {
+    calObj.operation = 'Exp';
     return calObjMutator(calObj, butName);
   } else if (butName === '%') {
     calObj.total = operate(total, next, butName);

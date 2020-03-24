@@ -12,13 +12,12 @@ const advStyling = (arg) => {
 };
 const colorStyler = () => ('colorMe');
 const Bpanel = ({ clickHandler }) => {
-  let advCal = false;
   const butName = [
-    ['AC', '+/-', '%', '÷', 'tan', 'log'],
-    ['7', '8', '9', 'x', 'ln', 'e'],
+    ['AC', '+/-', '%', '÷', 'ln', 'log'],
+    ['7', '8', '9', 'x', 'π', 'e'],
     ['4', '5', '6', '-', '√', 'Exp'],
-    ['1', '2', '3', '+', , ')', '('],
-    ['Rad', 'π', 'x!', 'Inv', 'sin', 'Cos'],
+    ['1', '2', '3', '+', ')', '('],
+    ['Rad', 'Inv', 'x!', 'tan', 'sin', 'cos'],
     ['0', '.', '='],
   ];
   return (
