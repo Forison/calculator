@@ -53,7 +53,15 @@ const calculate = ({ total, next, operation }, butName) => {
   } else if (['Exp'].includes(butName)) {
     calObj.operation = 'Exp';
     return calObjMutator(calObj, butName);
-  } else if (butName === '%') {
+  } else if (['x!'].includes(butName)) {
+    if (calObj.operation === null) {
+      calObj.total = calObj.total.concat('!')
+    } else {
+      calObj.next = calObj.next.concat('!')
+    }
+    return calObjMutator(calObj, butName);
+  }
+  else if (butName === '%') {
     calObj.total = operate(total, next, butName);
     calObj.next = '';
     calObj.operation = null;

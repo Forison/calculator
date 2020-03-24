@@ -34,9 +34,27 @@ const operate = (numberOne, numberTwo, operation) => {
       numberTwo = Math.PI;
     }
   }
-
+  const fib = (num) => {
+    if (num === 1) {
+      return 1;
+    }
+    else {
+      return num * fib(num - 1);
+    }
+  };
+  const handleFac = () => {
+    if (numberOne.length > 1 && numberOne.includes('!')) {
+      numberOne = numberOne.split('!').join('');
+      numberOne = fib(numberOne)
+    }
+    if (numberTwo.length > 1 && numberTwo.includes('!')) {
+      numberTwo = numberTwo.split('!').join('');
+      numberTwo = fib(numberTwo)
+    }
+  }
   handleE();
   handlePie();
+  handleFac();
   if (numberOne === 'undefined' || numberTwo === 'undefined') {
     results = 'undefined';
   } else {
