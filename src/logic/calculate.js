@@ -34,7 +34,12 @@ const calculate = ({ total, next, operation }, butName) => {
     return calObj;
   };
 
-  if (butName === '=') {
+  if (butName === ')' && total[0] === '(') {
+    total = total.slice(1, total.length)
+    calObj.total = operate(total, next, operation);
+    calObj.next = '';
+    calObj.operation = null;
+  } else if (butName === '=') {
     calObj.total = operate(total, next, operation);
     calObj.next = '';
     calObj.operation = null;
