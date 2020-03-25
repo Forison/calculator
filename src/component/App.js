@@ -26,7 +26,7 @@ class App extends Component {
         <div className="container-fluid">
           <Particleswrap />
           <div className="row">
-            <div className="col-12 col-md-8 col-lg-4 mx-auto bg-secondary shadow-lg mt-2 p-3">
+            <div className="col-12 col-md-8 col-lg-4 mx-auto bg-light shadow-lg mt-2 p-3">
               <Display result={total} nextKey={next} op={operation} />
               <Bpanel clickHandler={this.handleClick} />
             </div>

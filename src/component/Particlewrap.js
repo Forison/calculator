@@ -22,13 +22,13 @@ const Particlewrap = () => (
             },
           },
           color: {
-            value: "#fff",
+            value: "#f05e23",
           },
           shape: {
             type: "circle",
             stroke: {
               width: 2,
-              color: '#fff',
+              color: 'green',
             },
             polygon: {
               nb_sides: 7,
@@ -62,7 +62,7 @@ const Particlewrap = () => (
           line_linked: {
             enable: true,
             distance: 60,
-            color: '#ffffff',
+            color: '#777',
             opacity: 0.3687847739990702,
             width: 0.6413648243462091,
           },

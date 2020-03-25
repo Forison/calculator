@@ -2,7 +2,7 @@ import React from 'react';
 import propTypes from 'prop-types';
 
 const Display = ({ result, nextKey, op }) => (
-  <div className="displayWrap mb-5">
+  <div className="displayWrap mb-5 shadow-lg">
     <h1 className="results float-right">
       {result}
       {' '}

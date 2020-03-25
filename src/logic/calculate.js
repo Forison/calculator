@@ -1,10 +1,11 @@
 import operate from './operate';
 
-const calculate = ({ total, next, operation }, butName) => {
+const calculate = ({ total, next, operation, rad = false }, butName) => {
   const calObj = {
     total,
     next,
     operation,
+    rad,
   };
   const calObjMutator = () => {
     switch (butName) {
@@ -26,6 +27,9 @@ const calculate = ({ total, next, operation }, butName) => {
       case 'Exp':
         calObj.operation = butName;
         break;
+      case 'Rad':
+        calObj.rad = !calObj.rad;
+        break
       case '=':
         return total;
       default:
@@ -34,7 +38,10 @@ const calculate = ({ total, next, operation }, butName) => {
     return calObj;
   };
 
-  if (butName === ')' && total[0] === '(') {
+  if (butName === 'Rad') {
+    calObj.rad = !calObj.rad;
+    return calObjMutator(calObj, butName);
+  } else if (butName === ')' && total[0] === '(') {
     total = total.slice(1, total.length)
     calObj.total = operate(total, next, operation);
     calObj.next = '';
