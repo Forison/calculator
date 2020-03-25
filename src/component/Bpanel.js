@@ -44,9 +44,15 @@ class Bpanel extends Component {
   }
   styleToggle = (arg) => {
     if (arg === false) {
-      document.getElementById('Inv').style.backgroundColor = "#fff"
-    } else {
       document.getElementById('Inv').style.backgroundColor = "#f05e23";
+      document.getElementById('sin').style.backgroundColor = "#f05e23";
+      document.getElementById('cos').style.backgroundColor = "#f05e23";
+      document.getElementById('tan').style.backgroundColor = "#f05e23";
+    } else {
+      document.getElementById('Inv').style.backgroundColor = "#fff";
+      document.getElementById('sinh').style.backgroundColor = "#fff";
+      document.getElementById('cosh').style.backgroundColor = "#fff";
+      document.getElementById('tanh').style.backgroundColor = "#fff";
     }
   }
   wide = arg => (arg === '0' ? 'wide' : 'normal');

@@ -153,8 +153,69 @@ const operate = (numberOne, numberTwo, operation) => {
       } else {
         numberTwo = leftTwo * Math.LN10(rightTwo);
       }
+    } else if (numberOne.includes('tanh')) {
+      const left = numberOne.split('tanh')[0]
+      const right = numberOne.split('tanh')[1]
+      if (right === '') {
+        numberOne = 'undefined';
+      } else if (left === '') {
+        numberOne = Math.tanh(right);
+      } else {
+        numberOne = left * Math.tanh(right);
+      }
+    } else if (numberTwo.includes('tanh')) {
+      const leftTwo = numberTwo.split('tanh')[0]
+      const rightTwo = numberTwo.split('tanh')[1]
+      if (rightTwo === '') {
+        numberTwo = 'undefined';
+      } else if (leftTwo === '') {
+        numberTwo = Math.tanh(rightTwo);
+      } else {
+        numberTwo = leftTwo * Math.tanh(rightTwo);
+      }
+    } else if (numberOne.includes('sinh')) {
+      const left = numberOne.split('sinh')[0]
+      const right = numberOne.split('sinh')[1]
+      if (right === '') {
+        numberOne = 'undefined';
+      } else if (left === '') {
+        numberOne = Math.sinh(right);
+      } else {
+        numberOne = left * Math.sinh(right);
+      }
+    } else if (numberTwo.includes('sinh')) {
+      const leftTwo = numberTwo.split('sinh')[0]
+      const rightTwo = numberTwo.split('sinh')[1]
+      if (rightTwo === '') {
+        numberTwo = 'undefined';
+      } else if (leftTwo === '') {
+        numberTwo = Math.sinh(rightTwo);
+      } else {
+        numberTwo = leftTwo * Math.sinh(rightTwo);
+      }
+    } else if (numberOne.includes('cosh')) {
+      const left = numberOne.split('cosh')[0]
+      const right = numberOne.split('cosh')[1]
+      if (right === '') {
+        numberOne = 'undefined';
+      } else if (left === '') {
+        numberOne = Math.cosh(right);
+      } else {
+        numberOne = left * Math.cosh(right);
+      }
+    } else if (numberTwo.includes('cosh')) {
+      const leftTwo = numberTwo.split('cosh')[0]
+      const rightTwo = numberTwo.split('cosh')[1]
+      if (rightTwo === '') {
+        numberTwo = 'undefined';
+      } else if (leftTwo === '') {
+        numberTwo = Math.cosh(rightTwo);
+      } else {
+        numberTwo = leftTwo * Math.cosh(rightTwo);
+      }
     }
   }
+  
   handleTrig();
   handleE();
   handlePie();
