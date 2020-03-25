@@ -22,11 +22,8 @@ const calculate = ({ total, next, operation }, butName) => {
       case 'x':
       case '÷':
       case '%':
-      case 'tan':
-      case 'cos':
-      case 'sin':
-      case 'log':
       case '√':
+      case 'Exp':
         calObj.operation = butName;
         break;
       case '=':
@@ -45,13 +42,7 @@ const calculate = ({ total, next, operation }, butName) => {
     return calObjMutator(calObj, butName);
   } else if (butName === 'AC') {
     return calObjMutator(calObj, butName);
-  } else if (['x', '÷', '-', '+'].includes(butName)) {
-    return calObjMutator(calObj, butName);
-  } else if (['tan', 'sin', 'cos', 'log', '√'].includes(butName)) {
-    calObj.total = '1';
-    return calObjMutator(calObj, butName);
-  } else if (['Exp'].includes(butName)) {
-    calObj.operation = 'Exp';
+  } else if (['x', '÷', '-', '+', '√', 'Exp'].includes(butName)) {
     return calObjMutator(calObj, butName);
   } else if (['x!'].includes(butName)) {
     if (calObj.operation === null) {

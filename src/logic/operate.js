@@ -52,10 +52,116 @@ const operate = (numberOne, numberTwo, operation) => {
       numberTwo = fib(numberTwo)
     }
   }
+  const handleTrig = () => {
+    if (numberOne.includes('tan')) {
+      const left = numberOne.split('tan')[0]
+      const right = numberOne.split('tan')[1]
+      if (right === '') {
+        numberOne = 'undefined';
+      } else if (left === '') {
+        numberOne = Math.tan(right);
+      } else {
+        numberOne = left * Math.tan(right);
+      }
+    } else if (numberTwo.includes('tan')) {
+      const leftTwo = numberTwo.split('tan')[0]
+      const rightTwo = numberTwo.split('tan')[1]
+      if (rightTwo === '') {
+        numberTwo = 'undefined';
+      } else if (leftTwo === '') {
+        numberTwo = Math.tan(rightTwo);
+      } else {
+        numberTwo = leftTwo * Math.tan(rightTwo);
+      }
+    } else if (numberOne.includes('sin')) {
+      const left = numberOne.split('sin')[0]
+      const right = numberOne.split('sin')[1]
+      if (right === '') {
+        numberOne = 'undefined';
+      } else if (left === '') {
+        numberOne = Math.sin(right);
+      } else {
+        numberOne = left * Math.sin(right);
+      }
+    } else if (numberTwo.includes('sin')) {
+      const leftTwo = numberTwo.split('sin')[0]
+      const rightTwo = numberTwo.split('sin')[1]
+      if (rightTwo === '') {
+        numberTwo = 'undefined';
+      } else if (leftTwo === '') {
+        numberTwo = Math.sin(rightTwo);
+      } else {
+        numberTwo = leftTwo * Math.sin(rightTwo);
+      }
+    } else if (numberOne.includes('cos')) {
+      const left = numberOne.split('cos')[0]
+      const right = numberOne.split('cos')[1]
+      if (right === '') {
+        numberOne = 'undefined';
+      } else if (left === '') {
+        numberOne = Math.cos(right);
+      } else {
+        numberOne = left * Math.cos(right);
+      }
+    } else if (numberTwo.includes('cos')) {
+      const leftTwo = numberTwo.split('cos')[0]
+      const rightTwo = numberTwo.split('cos')[1]
+      if (rightTwo === '') {
+        numberTwo = 'undefined';
+      } else if (leftTwo === '') {
+        numberTwo = Math.cos(rightTwo);
+      } else {
+        numberTwo = leftTwo * Math.cos(rightTwo);
+      }
+    } else if (numberOne.includes('log')) {
+      const left = numberOne.split('log')[0]
+      const right = numberOne.split('log')[1]
+      if (right === '') {
+        numberOne = 'undefined';
+      } else if (left === '') {
+        numberOne = Math.log(right);
+      } else {
+        numberOne = left * Math.log(right);
+      }
+    } else if (numberTwo.includes('log')) {
+      const leftTwo = numberTwo.split('log')[0]
+      const rightTwo = numberTwo.split('log')[1]
+      if (rightTwo === '') {
+        numberTwo = 'undefined';
+      } else if (leftTwo === '') {
+        numberTwo = Math.log(rightTwo);
+      } else {
+        numberTwo = leftTwo * Math.log(rightTwo);
+      }
+    } else if (numberOne.includes('ln')) {
+      const left = numberOne.split('ln')[0]
+      const right = numberOne.split('ln')[1]
+      if (right === '') {
+        numberOne = 'undefined';
+      } else if (left === '') {
+        numberOne = Math.LN10(right);
+      } else {
+        numberOne = left * Math.LN10(right);
+      }
+    } else if (numberTwo.includes('ln')) {
+      const leftTwo = numberTwo.split('ln')[0]
+      const rightTwo = numberTwo.split('ln')[1]
+      if (rightTwo === '') {
+        numberTwo = 'undefined';
+      } else if (leftTwo === '') {
+        numberTwo = Math.LN10(rightTwo);
+      } else {
+        numberTwo = leftTwo * Math.LN10(rightTwo);
+      }
+    }
+  }
+  handleTrig();
   handleE();
   handlePie();
   handleFac();
-  if (numberOne === 'undefined' || numberTwo === 'undefined') {
+  if (isNaN(numberOne) || isNaN(numberTwo)) {
+    return results = 'error';
+  } else if (numberOne === 'undefined' || numberTwo === 'undefined') {
     results = 'undefined';
   } else {
     switch (operation) {
@@ -75,9 +181,6 @@ const operate = (numberOne, numberTwo, operation) => {
         results = big(numberOne).div(100).toString();
         break;
 
-      case 'tan':
-        results = big(numberOne * Math.tan(numberTwo)).toString();
-        break;
       case 'cos':
         results = big(numberOne * Math.cos(numberTwo)).toString();
         break;
@@ -89,6 +192,9 @@ const operate = (numberOne, numberTwo, operation) => {
         break;
       case 'log':
         results = big(numberOne * Math.log(numberTwo)).toString();
+        break;
+      case 'ln':
+        results = big(numberOne * Math.LN10(numberTwo)).toString();
         break;
       case 'Exp':
         results = big(Math.pow(numberOne, numberTwo)).toString();
