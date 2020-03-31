@@ -1,11 +1,31 @@
-# calculator
-This is a basic calculator for performing simple mathematical calculation. This is practical implementation of react js completed as part of a series of projects to be completed by students of [Microverse](https://www.microverse.org/ "The Global School for Remote Software Developers!").
+# React calculator
+
+This is a basic calculator for performing simple mathematical calculation. This is practical implementation of react js completed as part of a series of projects to be completed by students of 
+[Microverse](https://www.microverse.org/ "The Global School for Remote Software Developers!").
 ![calculator](./app.png)
+
+## Description
+
+This applivation is built primarily with react.js framework. The application enables user to able to make basic mathematical operations as listed in the ```**[Features]**``` section below.
+
 ## Technologies
 
+- React
 - HTML
 - CSS
 - JSX
+- Particle.js
+
+## Features
+
+- Addition
+- Substration
+- Multiplication
+- Division
+- Factorial
+- Indices
+- Logartithm
+- Basic trigonometry
 
 ## Usage
 
@@ -35,6 +55,10 @@ The demo page can be found [HERE](https://guarded-harbor-05894.herokuapp.com/)
 ## Contact
 
 [LinkedIn](https://www.linkedin.com/in/forison/) [Twitter](https://twitter.com/addo_forison)
+
+## Appreciation
+
+- [Microverse](https://www.microverse.org/ "The Global School for Remote Software Developers!")
 
 ## Contributing
 
