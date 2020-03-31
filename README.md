@@ -27,6 +27,15 @@ This applivation is built primarily with react.js framework. The application ena
 - Logartithm
 - Basic trigonometry
 
+## Features
+
+- Anti log
+- nth root
+- Degree results
+- Density
+- simultaneous equation
+- quadratic equation
+
 ## Usage
 
 > Clone the repository to your local machine
