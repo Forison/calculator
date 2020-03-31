@@ -6,7 +6,7 @@ This is a basic calculator for performing simple mathematical calculation. This 
 
 ## Description
 
-This applivation is built primarily with react.js framework. The application enables user to able to make basic mathematical operations as listed in the ```**[Features]**``` section below.
+This applivation is built primarily with react.js framework. The application enables user to able to make basic mathematical operations as listed in the ```[Features]``` section below.
 
 ## Technologies
 
@@ -54,11 +54,11 @@ The demo page can be found [HERE](https://guarded-harbor-05894.herokuapp.com/)
 
 ## Contact
 
-[LinkedIn](https://www.linkedin.com/in/forison/) [Twitter](https://twitter.com/addo_forison)
+[LinkedIn](https://www.linkedin.com/in/forison/) | [Twitter](https://twitter.com/addo_forison)
 
 ## Appreciation
 
-- [Microverse](https://www.microverse.org/ "The Global School for Remote Software Developers!")
+[Microverse](https://www.microverse.org/ "The Global School for Remote Software Developers!")
 
 ## Contributing
 
