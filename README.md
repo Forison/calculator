@@ -27,7 +27,7 @@ This applivation is built primarily with react.js framework. The application ena
 - Logartithm
 - Basic trigonometry
 
-## Features
+## Potential Features
 
 - Anti log
 - nth root
